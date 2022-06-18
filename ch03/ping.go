@@ -43,7 +43,7 @@ func Pinger(ctx context.Context, w io.Writer, reset <-chan time.Duration) {
 			}
 		case <-timer.C:
 			if _, err := w.Write([]byte("ping")); err != nil {
-				// tarck and act on consecutive timeouts here
+				// track and act on consecutive timeouts here
 				return
 			}
 		}
