@@ -7,6 +7,7 @@ import (
 	"testing"
 )
 
+// This is a comment above a test
 func TestReadIntoBuffer(t *testing.T) {
 	payload := make([]byte, 1<<24) // 16 mb
 	_, err := rand.Read(payload)   // generate a random payload
