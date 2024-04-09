@@ -115,7 +115,10 @@ func TestProxy(t *testing.T) {
 		t.Fatal(err)
 	}
 
-	msgs := []struct{ Message, Reply string }{
+	msgs := []struct {
+		Message string
+		Reply   string
+	}{
 		{"ping", "pong"},
 		{"pong", "pong"},
 		{"echo", "echo"},
